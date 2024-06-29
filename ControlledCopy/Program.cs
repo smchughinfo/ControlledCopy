@@ -44,7 +44,7 @@ class Program
             var file = files[i];
             try
             {
-                string relativePath = file.Substring(sourcePath.Length + 1);
+                string relativePath = file.Replace(sourcePath, "");
                 string destinationFile = Path.Combine(destinationPath, relativePath);
 
                 // Ensure the destination directory exists
